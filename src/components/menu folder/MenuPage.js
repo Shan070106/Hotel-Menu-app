@@ -10,6 +10,12 @@ function MenuPage({ onFoodClick, onConfirmOrder, onAddToOrder, orderItems }) {
     alert(`${food.name} added to order!`);
   };
 
+const displayQuantity = (food) => {
+    var itemIndex = orderItems.findIndex(item => item.id === food.id);
+    
+    return (itemIndex >= 0)?orderItems[itemIndex]["quantity"]:0 ;
+  }
+  
   return (
     <div>
       {/* Header */}
@@ -39,6 +45,7 @@ function MenuPage({ onFoodClick, onConfirmOrder, onAddToOrder, orderItems }) {
             </div>
             <div className="food-actions">
               <span className="food-price">${food.price}</span>
+              <span className="food-quantity">Qty: {displayQuantity(food)}</span>
               <button
                 onClick={(e) => handlePlaceOrder(e, food)}
                 className="place-order-btn"

@@ -18,7 +18,7 @@ function FoodDetailPage({ foodId, onBack, onAddToOrder }) {
 
   const handleAddToOrder = () => {
     onAddToOrder(food);
-    alert(`${food.name} added to order!`);
+    // alert(`${food.name} added to order!`);
     onBack();
   };
 
@@ -60,7 +60,7 @@ function FoodDetailPage({ foodId, onBack, onAddToOrder }) {
               className="add-to-order-btn"
               onClick={handleAddToOrder}
             >
-              Add to Order - ${food.price}
+              Add to Order - Rs.{food.price}
             </button>
           </div>
         </div>

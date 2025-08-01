@@ -57,11 +57,11 @@ const OrderPage = ({ orderItems = [], onBack, onClearOrder }) => {
                     <h3 className="item-name">{item.name}</h3>
                     <div className="item-details">
                       <span className="item-quantity">Qty: {item.quantity}</span>
-                      <span className="item-price">${item.price.toFixed(2)} each</span>
+                      <span className="item-price">Rs. {item.price.toFixed(2)} each</span>
                     </div>
                   </div>
                   <div className="item-total">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    Rs. {(item.price * item.quantity).toFixed(2)}
                   </div>
                 </div>
               ))}
@@ -69,7 +69,7 @@ const OrderPage = ({ orderItems = [], onBack, onClearOrder }) => {
 
             <div className="order-summary">
               <div className="total-cost">
-                <h2>Total: ${calculateTotal()}</h2>
+                <h2>Total: Rs. {calculateTotal()}</h2>
               </div>
             </div>
           </>
@@ -106,7 +106,7 @@ const OrderPage = ({ orderItems = [], onBack, onClearOrder }) => {
             onClick={handlePayClick}
             disabled={orderItems.length === 0 || !hasInteractedWithToggle}
           >
-            Pay ${calculateTotal()}
+            Pay Rs.{calculateTotal()}
           </button>
         )}
       </div>

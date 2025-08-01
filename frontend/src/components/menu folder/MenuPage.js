@@ -7,7 +7,7 @@ function MenuPage({ onFoodClick, onConfirmOrder, onAddToOrder, orderItems }) {
   const handlePlaceOrder = (e, food) => {
     e.stopPropagation();
     onAddToOrder(food);
-    alert(`${food.name} added to order!`);
+    // alert(`${food.name} added to order!`);
   };
 
 const displayQuantity = (food) => {
@@ -44,7 +44,7 @@ const displayQuantity = (food) => {
               </span>
             </div>
             <div className="food-actions">
-              <span className="food-price">${food.price}</span>
+              <span className="food-price">Rs. {food.price}</span>
               <span className="food-quantity">Qty: {displayQuantity(food)}</span>
               <button
                 onClick={(e) => handlePlaceOrder(e, food)}

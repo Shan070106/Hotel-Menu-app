@@ -1,5 +1,5 @@
 import React from 'react';
-import foodItems from 'C:/Users/vivvi/Desktop/hotel/src/food data/foodItems.json';
+import foodItems from '/home/shanmugam/Documents/projects/Hotel-Menu-app/frontend/src/food data/foodItems.json';
 import './FoodDetailPage.css';
 
 function FoodDetailPage({ foodId, onBack, onAddToOrder }) {

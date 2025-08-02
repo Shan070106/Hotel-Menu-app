@@ -7,7 +7,6 @@ function MenuPage({ onFoodClick, onConfirmOrder, onAddToOrder, orderItems }) {
   const handlePlaceOrder = (e, food) => {
     e.stopPropagation();
     onAddToOrder(food);
-    // alert(`${food.name} added to order!`);
   };
 
 const displayQuantity = (food) => {

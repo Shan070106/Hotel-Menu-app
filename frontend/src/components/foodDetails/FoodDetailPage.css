@@ -1,119 +1,143 @@
 /* General Styles */
 body {
   min-height: 100vh;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
+/* Not Found Container */
 .not-found-container {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 30%, #e2e2e2);
 }
 
 .not-found-container h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #343a40;
 }
 
 .back-to-menu-btn {
-  background-color: #007bff;
-  color: white;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .back-to-menu-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(to right, #0056b3, #003d80);
 }
 
 /* Header Styles */
 .food-detail-header {
-  background-color: #fff;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #dee2e6;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .food-detail-header button {
   background-color: #6c757d;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
   cursor: pointer;
   margin-right: 1rem;
-  transition: background-color 0.2s;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .food-detail-header button:hover {
-  background-color: #545b62;
+  background-color: #495057;
+  transform: scale(1.05);
 }
 
 .food-detail-header h1 {
   margin: 0;
-  color: #333;
+  color: #212529;
+  font-size: 1.75rem;
 }
 
 /* Food Details */
 .food-detail-container {
-  padding: 2rem;
-  max-width: 600px;
+  padding: 3rem 1rem;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .food-image {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .food-image img {
   width: 100%;
-  max-width: 400px;
-  height: 300px;
+  max-width: 450px;
+  height: 320px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.food-image img:hover {
+  transform: scale(1.03);
 }
 
 .food-details-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .food-details-card h2 {
-  margin: 0 0 1rem 0;
-  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #495057;
   text-align: center;
 }
 
 .food-details-card div {
   line-height: 1.8;
   color: #555;
+  font-size: 1.05rem;
 }
 
 .food-details-card div strong {
   display: block;
   margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .food-price {
-  font-size: 1.5rem;
-  color: #28a745;
+  font-size: 1.75rem;
+  color: #20c997;
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 .food-type {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 20px;
   font-size: 1rem;
   font-weight: bold;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .food-type.veg {
@@ -128,17 +152,21 @@ body {
 
 /* Add to Order Button */
 .add-to-order-btn {
-  background-color: #28a745;
+  background: linear-gradient(to right, #28a745, #218838);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  transition: background-color 0.2s;
+  display: block;
+  margin: 2rem auto 0;
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .add-to-order-btn:hover {
-  background-color: #218838;
+  background-color: #1e7e34;
+  transform: translateY(-2px);
 }

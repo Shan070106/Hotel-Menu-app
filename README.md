@@ -200,8 +200,3 @@ Specify a license by adding a `LICENSE` file to the repository. If none is prese
 ## Contact
 Maintainer: Shan070106  
 GitHub: https://github.com/Shan070106
-
----
-
-Notes:
-- I drafted this README based on repository language composition and typical web app conventions. If you want, I can inspect the repository files and update this README with exact commands, demo screenshots, the precise project structure, and details about the small Python utility. I can also open a PR to add the README to the repository.  
